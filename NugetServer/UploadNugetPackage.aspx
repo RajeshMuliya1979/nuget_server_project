@@ -1,7 +1,7 @@
 ﻿<%@ Page Language="C#" Title="Nuget Package Upload" AutoEventWireup="true" CodeBehind="UploadNugetPackage.aspx.cs" Inherits="NugetServer.UploadNugetPackage" %>
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="xml:lang">
 <head runat="server">
     <title>Upload File</title>
     <link href="css/login-page.css" rel="stylesheet" />
@@ -30,9 +30,7 @@
 <body>
     <form id="form1" runat="server">
         <div id="login" class="container">
-            <center>
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Red"> </asp:Label>
-            </center>
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red"> </asp:Label>
             <label><b>Select Nuget File(.nupkg)</b></label>
             <div class="logout">
                 <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Font-Bold="true"></asp:LinkButton>
@@ -47,11 +45,11 @@
         </div>
 
         <div class="container">
-            <h3>Package Details
-                <div style="float: right;">
-                    Click <a href="<%= VirtualPathUtility.ToAbsolute("~/Default.aspx") %>">here</a> to view nuget server detail.
-                </div>
-            </h3>
+            <h3>Package Details</h3>
+            <div>
+                Click <a href="<%= VirtualPathUtility.ToAbsolute("~/Default.aspx") %>">here</a> to view nuget server detail.
+            </div>
+
             <hr />
             <asp:TreeView ID="trPackageList" runat="server" ImageSet="XPFileExplorer" NodeIndent="15" ExpandDepth="0">
                 <HoverNodeStyle Font-Underline="True" ForeColor="#6666AA" />

@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="xml:lang">
 <head runat="server">
     <title>Login Page</title>
     <link href="css/login-page.css" rel="stylesheet" />
@@ -11,10 +11,8 @@
     <form id="form1" runat="server">
 
         <div id="login" class="container">
-            <center>
-                <h3>Login to Nuget Server</h3>
-                <asp:Label ID="lblMessage" runat="server" ForeColor="Red"> </asp:Label>
-            </center>
+            <h3>Login to Nuget Server</h3>
+            <asp:Label ID="lblMessage" runat="server" ForeColor="Red"> </asp:Label>
             <label><b>Username</b></label>
             <asp:RequiredFieldValidator ID="reqtxtUsername" runat="server" Style="float: right" ControlToValidate="txtUsername" ErrorMessage="Please enter User Name" ValidationGroup="Login" ForeColor="Red"></asp:RequiredFieldValidator>
             <asp:TextBox runat="server" ID="txtUsername" placeholder="Enter Username"></asp:TextBox>
