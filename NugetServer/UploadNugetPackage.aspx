@@ -33,7 +33,7 @@
             <asp:Label ID="lblMessage" runat="server" ForeColor="Red"> </asp:Label>
             <label><b>Select Nuget File(.nupkg)</b></label>
             <div class="logout">
-                <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Font-Bold="true"></asp:LinkButton>
+                <asp:LinkButton ID="btnLogout" runat="server" Text="Logout" OnClick="btnLogout_Click" Font-Bold="true" CausesValidation="false"></asp:LinkButton>
             </div>
             <asp:FileUpload ID="flpNugetFile" runat="server" />
             <asp:RequiredFieldValidator ID="reqflpNugetFile" runat="server" Display="Dynamic"
